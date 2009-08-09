@@ -1,0 +1,12 @@
+class CreateOptionsVehicles < ActiveRecord::Migration
+  def self.up
+    create_table :options_vehicles do |t|
+     t.integer :vehicle_id
+     t.integer :option_id
+    end
+  end
+
+  def self.down
+    drop_table :options_vehicles
+  end
+end

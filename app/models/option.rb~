@@ -1,0 +1,4 @@
+class Option < ActiveRecord::Base
+  has_many :option_vehicle
+  has_many :vehicle, :through => :option_vehicle
+end

@@ -1,0 +1,2 @@
+class TypeVehicle < ActiveRecord::Base
+end

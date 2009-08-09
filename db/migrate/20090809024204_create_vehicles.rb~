@@ -1,0 +1,22 @@
+class CreateVehicles < ActiveRecord::Migration
+  def self.up
+    create_table :vehicles do |t|
+      t.float   :amount
+      t.string  :fuel
+      t.string  :color
+      t.string  :note
+      t.date    :year
+      t.date    :model
+      t.integer :doors
+      t.integer :finale
+
+      t.integer :type_vehicle_id
+      t.integer :option_vehicle_id
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :vehicles
+  end
+end

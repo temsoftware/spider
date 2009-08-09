@@ -1,0 +1,10 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: spider
+  pool: 5
+  username: root
+  password: maria123
+  host: localhost
+

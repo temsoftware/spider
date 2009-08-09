@@ -1,0 +1,4 @@
+class Brend < ActiveRecord::Base
+  has_many :vehicle
+  has_many :car
+end

@@ -1,0 +1,12 @@
+class CreateOptionVehicles < ActiveRecord::Migration
+  def self.up
+    create_table :option_vehicles do |t|
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :option_vehicles
+  end
+end
