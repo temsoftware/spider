@@ -1,0 +1,9 @@
+<h1>Lista de Veiculos</h1>
+  <%@vehicles.each do |veiculo|%>
+    <p><%=veiculo.car.brend.name%> <%=veiculo.car.name%> <%=veiculo.year.strftime("%Y")%>/<%=veiculo.model.strftime("%Y")%></p>
+    <ul>
+      <%veiculo.option.collect do |item|%>
+        <li><%=item.description%></li>
+      <% end %>
+    </ul>
+  <% end %>

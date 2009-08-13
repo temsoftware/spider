@@ -1,0 +1,5 @@
+module UsersHelper
+ #def profile_form_column(record, input_name)
+ #   select :record, :profile, :name => input_name
+ # end 
+end

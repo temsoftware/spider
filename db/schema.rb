@@ -9,9 +9,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 9) do
+ActiveRecord::Schema.define(:version => 11) do
 
-  create_table "brends", :force => true do |t|
+  create_table "brands", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -19,12 +19,12 @@ ActiveRecord::Schema.define(:version => 9) do
 
   create_table "cars", :force => true do |t|
     t.string   "name"
-    t.integer  "brend_id"
+    t.integer  "brand_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "cars", ["brend_id"], :name => "fk_cars_brends"
+  add_index "cars", ["brand_id"], :name => "fk_cars_brands"
 
   create_table "colors", :force => true do |t|
     t.string   "name"
@@ -60,17 +60,35 @@ ActiveRecord::Schema.define(:version => 9) do
   add_index "options_vehicles", ["option_id"], :name => "fk_options_vehicles_options"
   add_index "options_vehicles", ["vehicle_id"], :name => "fk_options_vehicles_vehicles"
 
+  create_table "profiles", :force => true do |t|
+    t.string   "description", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "type_vehicles", :force => true do |t|
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  create_table "users", :force => true do |t|
+    t.string   "name",                         :null => false
+    t.string   "login",                        :null => false
+    t.string   "pass",                         :null => false
+    t.boolean  "active",     :default => true, :null => false
+    t.integer  "profile_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["profile_id"], :name => "fk_users_profiles"
+
   create_table "vehicles", :force => true do |t|
-    t.float    "amount"
+    t.integer  "amount",          :limit => 10, :precision => 10, :scale => 0
     t.string   "note"
-    t.date     "year"
-    t.date     "model"
+    t.datetime "year"
+    t.datetime "model"
     t.integer  "doors"
     t.integer  "finale"
     t.string   "km"

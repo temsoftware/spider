@@ -1,12 +1,12 @@
 class CreateCars < ActiveRecord::Migration
   def self.up
     create_table :cars do |t|
-      t.string  :name
-      t.integer :brend_id
+      t.string     :name
+      t.references :brand
       t.timestamps
     end
 #Chaves Estrangeiras
-      execute "ALTER TABLE cars ADD CONSTRAINT fk_cars_brends FOREIGN KEY (brend_id) REFERENCES brends(id)"
+      execute "ALTER TABLE cars ADD CONSTRAINT fk_cars_brands FOREIGN KEY (brand_id) REFERENCES brands(id)"
   end
 
   def self.down

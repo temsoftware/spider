@@ -1,9 +1,10 @@
 class CreateOptionsVehicles < ActiveRecord::Migration
   def self.up
     create_table :options_vehicles do |t|
-     t.integer :vehicle_id
-     t.integer :option_id
-      t.timestamps
+     t.references :vehicle
+     t.references :option
+
+     t.timestamps
     end
 #Chaves Estrangeiras
       execute "ALTER TABLE options_vehicles ADD CONSTRAINT fk_options_vehicles_vehicles FOREIGN KEY (vehicle_id) REFERENCES vehicles(id)"

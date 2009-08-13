@@ -1,0 +1,12 @@
+<h2>Administracao</h2>
+  <ul>
+    <li><%= link_to "Perfis",               profiles_path()%></li>
+    <li><%= link_to "Usuários",             users_path()%></li>
+    <li><%= link_to "Marcas",               brands_path()%></li>
+    <li><%= link_to "Modelos",              cars_path()%></li>
+    <li><%= link_to "Opcionais",            options_path()%></li>
+    <li><%= link_to "Cores",                colors_path()%></li>
+    <li><%= link_to "Tipos de Câmbio",      gears_path()%></li>
+    <li><%= link_to "Tipos de Combustível", fuels_path()%></li>
+    <li><%= link_to "Tipos de Veículo", type_vehicles_path()%></li>
+  </ul>

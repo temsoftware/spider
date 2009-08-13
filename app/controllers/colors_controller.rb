@@ -1,0 +1,10 @@
+class ColorsController < ApplicationController
+ active_scaffold :color do |item|
+    item.label = "Cores"
+    item.columns = [:name, :created_at]
+    item.columns[:name].label = "Nome"
+    item.columns[:created_at].label = "Criado em"
+
+    item.actions.exclude :show
+  end
+end

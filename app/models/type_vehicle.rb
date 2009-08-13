@@ -1,3 +1,6 @@
 class TypeVehicle < ActiveRecord::Base
   has_many :vehicle
+
+  validates_presence_of :description
+  validates_uniqueness_of :description, :case_sensitive => :false
 end

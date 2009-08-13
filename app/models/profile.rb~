@@ -1,0 +1,23 @@
+class Profile < ActiveRecord::Base
+  has_many :user
+  
+  validates_presence_of :description
+  validates_uniqueness_of :description, :case_sensitive => :false
+
+  def to_label
+    "#{description}"
+  end
+
+#  def created_at
+#    self.convert_date read_attribute(:updated_at)
+#  end
+  
+#  def updated_at
+#    self.convert_date read_attribute(:updated_at)
+#  end
+
+#  protected
+#  def convert_date(date)
+#    return date.strftime("%d/%m/%Y") if date.present?
+#  end
+end

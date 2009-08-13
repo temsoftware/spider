@@ -1,0 +1,21 @@
+<h2>Acesso Restrito!</h2>
+<h3 align="center">Visitante, para ter acesso total ao sistema, por favor efetue o login no formulario abaixo. Qualquer problema, contate o Administrador do sistema.</h3>
+
+<%if (flash[:notice])%>
+  <div id="mensagem" class="flash">
+    <%=flash[:notice]%>
+  </div>
+<%end%>
+
+<div id="box_login">
+  <%=form_tag sessions_path, :method => :post %>
+    <label>Login:</label>
+      <%=text_field "user", "login", :value => "", :size => "15", :maxlength => "15" %>
+
+    <label>Senha:</label>
+    <%=password_field "user", "pass", :value => "", :size => "15", :maxlength => "11" %>
+
+    <button type="submit" class = "submit">entrar</button>
+</form>
+</div>
+
