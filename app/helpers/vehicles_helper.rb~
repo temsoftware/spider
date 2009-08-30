@@ -1,0 +1,11 @@
+module VehiclesHelper
+  def vehicle_picture1_form_column(record, input_name)
+    file_column_field 'record', :picture1, :onkeypress=>"return numbersonly(event, false)"
+  end
+
+  #onkeypress event is used to advoid typing characters in file field
+
+  def vehicle_picture1_column(record)
+    image_tag url_for_file_column(record, "picture1") if record.vehicle_picture1
+  end
+end

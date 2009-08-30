@@ -9,13 +9,6 @@ class CreateVehicles < ActiveRecord::Migration
       t.integer  :finale
       t.string   :km
 
-      t.string   :picture1_file_name
-      t.string   :picture2_file_name
-      t.string   :picture3_file_name
-      t.string   :picture4_file_name
-      t.string   :picture5_file_name
-      t.string   :picture6_file_name
-
       t.references :car
       t.references :color
       t.references :gear

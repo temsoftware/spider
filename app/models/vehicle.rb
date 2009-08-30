@@ -6,6 +6,7 @@ class Vehicle < ActiveRecord::Base
   belongs_to :color
 
  # has_many   :option, :through => :option_vehicle
+  has_many :picture
   has_many :options_vehicle
   has_many :option, :through => :options_vehicle
 
@@ -22,29 +23,29 @@ class Vehicle < ActiveRecord::Base
   #validates_presence_of :fuel
   #validates_presence_of :type_vehicle
 
-  has_attached_file :picture1, :styles => { :thumbnail => "140x140>"},
-                    :url => "/uploads/pictures/:id/picture1_:style.:extension",
-                    :path => ":rails_root/public/uploads/pictures/:id/picture1_:style.:extension"
+  #has_attached_file :picture1, :styles => { :thumbnail => "140x140>"},
+   #                 :url => "/uploads/pictures/:id/picture1_:style.:extension",
+    #                :path => ":rails_root/public/uploads/pictures/:id/picture1_:style.:extension"
 
-  has_attached_file :picture2, :styles => { :thumbnail => "140x140>"},
-                    :url => "/uploads/pictures/:id/picture2_:style.:extension",
-                    :path => ":rails_root/public/uploads/pictures/:id/picture2_:style.:extension"
+  #has_attached_file :picture2, :styles => { :thumbnail => "140x140>"},
+   #                 :url => "/uploads/pictures/:id/picture2_:style.:extension",
+    #                :path => ":rails_root/public/uploads/pictures/:id/picture2_:style.:extension"
 
-  has_attached_file :picture3, :styles => { :thumbnail => "140x140>"},
-                    :url => "/uploads/pictures/:id/picture3_:style.:extension",
-                    :path => ":rails_root/public/uploads/pictures/:id/picture3_:style.:extension"
+  #has_attached_file :picture3, :styles => { :thumbnail => "140x140>"},
+   #                 :url => "/uploads/pictures/:id/picture3_:style.:extension",
+    #                :path => ":rails_root/public/uploads/pictures/:id/picture3_:style.:extension"
 
-  has_attached_file :picture4, :styles => { :thumbnail => "140x140>"},
-                    :url => "/uploads/pictures/:id/picture4_:style.:extension",
-                    :path => ":rails_root/public/uploads/pictures/:id/picture4_:style.:extension"
+  #has_attached_file :picture4, :styles => { :thumbnail => "140x140>"},
+   #                 :url => "/uploads/pictures/:id/picture4_:style.:extension",
+    #                :path => ":rails_root/public/uploads/pictures/:id/picture4_:style.:extension"
 
-  has_attached_file :picture5, :styles => { :thumbnail => "140x140>"},
-                     :url => "/uploads/pictures/:id/picture5_:style.:extension",
-                    :path => ":rails_root/public/uploads/pictures/:id/picture5_:style.:extension"
+  #has_attached_file :picture5, :styles => { :thumbnail => "140x140>"},
+   #                  :url => "/uploads/pictures/:id/picture5_:style.:extension",
+    #                :path => ":rails_root/public/uploads/pictures/:id/picture5_:style.:extension"
 
-  has_attached_file :picture6, :styles => { :thumbnail => "140x140>"},
-                    :url => "/uploads/pictures/:id/picture6_:style.:extension",
-                    :path => ":rails_root/public/uploads/pictures/:id/picture6_:style.:extension"
+  #has_attached_file :picture6, :styles => { :thumbnail => "140x140>"},
+   #                 :url => "/uploads/pictures/:id/picture6_:style.:extension",
+    #                :path => ":rails_root/public/uploads/pictures/:id/picture6_:style.:extension"
 
   def to_label
     "#{car.brand.name} #{car.name} #{color.name} #{year} / #{model}"

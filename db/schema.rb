@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 11) do
+ActiveRecord::Schema.define(:version => 12) do
 
   create_table "brands", :force => true do |t|
     t.string   "name"
@@ -60,6 +60,13 @@ ActiveRecord::Schema.define(:version => 11) do
   add_index "options_vehicles", ["option_id"], :name => "fk_options_vehicles_options"
   add_index "options_vehicles", ["vehicle_id"], :name => "fk_options_vehicles_vehicles"
 
+  create_table "pictures", :force => true do |t|
+    t.integer  "vehicle_id"
+    t.string   "picture_file_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "profiles", :force => true do |t|
     t.string   "description", :null => false
     t.datetime "created_at"
@@ -85,19 +92,13 @@ ActiveRecord::Schema.define(:version => 11) do
   add_index "users", ["profile_id"], :name => "fk_users_profiles"
 
   create_table "vehicles", :force => true do |t|
-    t.integer  "amount",             :limit => 10, :precision => 10, :scale => 0
+    t.integer  "amount",          :limit => 10, :precision => 10, :scale => 0
     t.string   "note"
     t.datetime "year"
     t.datetime "model"
     t.integer  "doors"
     t.integer  "finale"
     t.string   "km"
-    t.string   "picture1_file_name"
-    t.string   "picture2_file_name"
-    t.string   "picture3_file_name"
-    t.string   "picture4_file_name"
-    t.string   "picture5_file_name"
-    t.string   "picture6_file_name"
     t.integer  "car_id"
     t.integer  "color_id"
     t.integer  "gear_id"

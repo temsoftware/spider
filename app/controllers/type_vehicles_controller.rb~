@@ -5,6 +5,6 @@ class TypeVehiclesController < ApplicationController
     item.columns[:description].label = "Descrição"
     item.columns[:created_at].label = "Criado em"
 
-    item.actions.exclude :update, :show
+    item.actions.exclude :show
   end
 end
