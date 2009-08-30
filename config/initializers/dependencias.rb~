@@ -1,0 +1,2 @@
+require 'brazilian-rails'
+#require 'brtraducao/inflector_portuguese'

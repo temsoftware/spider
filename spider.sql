@@ -78,6 +78,7 @@ insert into options (description) values ("TRAVA ELETRICA");
 insert into options (description) values ("AR CONDICIONADO");
 
 /*CARROS A VENDA*/
+/*
 insert into vehicles (amount, note, year, model, doors, finale, km, 
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
@@ -139,9 +140,11 @@ car_id, color_id, gear_id, fuel_id, type_vehicle_id)
    12, 5, 3, 4, 1);
 
 
-/*OPCIONAIS DO MEU CARRO*/
+
 insert into options_vehicles (vehicle_id, option_id) values (1, 1);
 insert into options_vehicles (vehicle_id, option_id) values (1, 3);
 insert into options_vehicles (vehicle_id, option_id) values (1, 4);
 insert into options_vehicles (vehicle_id, option_id) values (2, 1);
+
+*/
 

@@ -9,11 +9,16 @@ class CreateVehicles < ActiveRecord::Migration
       t.integer  :finale
       t.string   :km
 
+      t.string   :picture_file_name
+      # t.string   :picture_content_type
+      # t.integer  :picture_file_size
+      # t.datetime :picture_updated_at
+
       t.references :car
-      t.references :color_id
-      t.references :gear_id
-      t.references :fuel_id
-      t.references :type_vehicle_id
+      t.references :color
+      t.references :gear
+      t.references :fuel
+      t.references :type_vehicle
       t.timestamps
     end
 #Chaves Estrangeiras

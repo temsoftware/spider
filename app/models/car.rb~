@@ -1,3 +1,5 @@
+require 'brazilian-rails'
+
 class Car < ActiveRecord::Base
   has_many   :vehicle
   belongs_to :brand
@@ -8,6 +10,6 @@ class Car < ActiveRecord::Base
   validates_presence_of :brand
   
   def to_label
-    "#{brand.name} #{name} #{year} / #{model}"
+    "#{brand.name} #{name}"
   end
 end

@@ -85,13 +85,19 @@ ActiveRecord::Schema.define(:version => 11) do
   add_index "users", ["profile_id"], :name => "fk_users_profiles"
 
   create_table "vehicles", :force => true do |t|
-    t.integer  "amount",          :limit => 10, :precision => 10, :scale => 0
+    t.integer  "amount",             :limit => 10, :precision => 10, :scale => 0
     t.string   "note"
     t.datetime "year"
     t.datetime "model"
     t.integer  "doors"
     t.integer  "finale"
     t.string   "km"
+    t.string   "picture1_file_name"
+    t.string   "picture2_file_name"
+    t.string   "picture3_file_name"
+    t.string   "picture4_file_name"
+    t.string   "picture5_file_name"
+    t.string   "picture6_file_name"
     t.integer  "car_id"
     t.integer  "color_id"
     t.integer  "gear_id"
