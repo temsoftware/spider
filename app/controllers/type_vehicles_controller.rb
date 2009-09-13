@@ -1,4 +1,6 @@
 class TypeVehiclesController < ApplicationController
+  layout "admin"
+
   active_scaffold :type_vehicle do |item|
     item.label = "Tipos de Veículo"
     item.columns = [:description, :created_at]

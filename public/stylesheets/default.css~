@@ -1,4 +1,180 @@
-body {
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color:#E6E7E8;
+}
+#fundo_pag_footer
+{
+	background-image:url(../images/bg_footer.gif);
+	background-repeat:no-repeat;
+	height:60px;
+	clear:both;
+}
+#fundo_pag{
+    background-image:url(../images/bg_pag.gif);
+    background-repeat:repeat-y;
+}
+#img_top{
+	position:relative;
+}
+#menu_top{
+	background:black none repeat scroll 0 0;
+	border-bottom:2px none;
+	height:30px;
+	left:120px;
+	position:absolute;
+	width:800px;
+	border-bottom-width: 3px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	border-bottom-color:red;
+	border-style: solid;
+	font-weight:bold;
+	_top:180px;
+}
+
+#menu_top ul{
+	list-style-type: none;
+	padding-left:30px;
+	padding-top:5px;
+
+}
+#menu_top ul li{
+	float: left;
+	padding-right:30px;
+	padding-top:2px;
+	color:#FFF;
+	font-family:Verdana, Geneva, sans-serif;
+}
+#banner_site{
+	background-image:url(images/banner_site.jpg);
+	background-repeat:no-repeat;
+	height:237px;
+	left:120px;
+	position:relative;
+	top:33px;
+	width:800px;
+}
+#conteudo{
+    position:relative;
+    top:10px;
+    width:920px;
+}
+#vehicles{
+    float:left;
+    left:120px;
+    position:relative;
+    top:5px;
+    width:340px;
+}
+#moto{
+    float:left;
+    left:115px;
+    position:relative;
+    top:5px;
+    width:340px;
+}
+#menu_direita{
+
+    top:5px;
+    float:right;
+    position:relative;
+    margin-top:5px;
+
+}
+#parceiros{
+    position:relative;
+    width:115px;
+}
+#enderecos{
+    position:relative;
+    width:115px;
+    top:15px;
+}
+.veiculo_foto{
+    float:left;
+    left:5px;
+    top:5px;
+    position:relative;
+}
+.veiculo_listado{
+    background-color:#D0D0D0;
+    height:109px;
+    width:327px;
+    float:left;
+    margin-left:5px;
+    position:relative;
+    margin-top:5px;
+}
+.carro_descricao{
+    float:right;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:13px;
+    font-weight:bold;
+    position:relative;
+    top:7px;
+    width:190px;
+}
+.carro_preco{
+    color:#b9240e;
+    font-size:16px;
+    position:relative;
+    top:8px;
+}
+.veiculo_saiba_mais{
+    color:#b9240e;
+    float:right;
+    font-size:10px;
+    position:relative;
+    right:7px;
+    top:18px;
+}
+.menu_direita_top{
+    background-attachment:scroll;
+    background-color:#D0D0D0;
+    background-image:none;
+    background-position:0 0;
+    background-repeat:repeat;
+    padding-left:5px;
+    padding-top:3px;
+    position:relative;
+}
+.menu_direita_footter{
+    border-bottom-color:#D0D0D0;
+    border-bottom-style:solid;
+    border-bottom-width:5px;
+}
+.menu_direita_medium{
+    margin-bottom:5px;
+    margin-left:5px;
+    margin-top:5px;
+    width:115px;
+}
+.menu_direita_label{
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:13px;
+    font-weight:bold;
+}
+.menu_direita_imgs{
+    margin-bottom:4px;
+    margin-top:4px;
+    
+}
+.menu_direita_element{
+    margin-bottom:15px;
+}
+.label_loja{
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:11px;
+}
+
+/*MAH*/
+
+.bg_siscog {
   font:76% Verdana,Tahoma,Arial,sans-serif;
   background:#ffffff url(../images/bg.gif) top center repeat-y;
   color:#404040;
@@ -89,7 +265,7 @@ blockquote{
     list-style:none;
     font-size:0.9em;
     padding:4 0 0px 15px;
-    margin-bottom:25px;
+    margin-bottom:20px;
     margin-top:0px;
 }
 

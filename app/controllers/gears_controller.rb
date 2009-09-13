@@ -1,4 +1,6 @@
 class GearsController < ApplicationController
+  layout "admin"
+
   active_scaffold :gear do |item|
     item.label = "Câmbios"
     item.columns = [:name, :created_at]

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 12) do
+ActiveRecord::Schema.define(:version => 15) do
 
   create_table "brands", :force => true do |t|
     t.string   "name"
@@ -44,6 +44,10 @@ ActiveRecord::Schema.define(:version => 12) do
     t.datetime "updated_at"
   end
 
+  create_table "models", :force => true do |t|
+    t.string "description"
+  end
+
   create_table "options", :force => true do |t|
     t.string   "description"
     t.datetime "created_at"
@@ -62,9 +66,12 @@ ActiveRecord::Schema.define(:version => 12) do
 
   create_table "pictures", :force => true do |t|
     t.integer  "vehicle_id"
-    t.string   "picture_file_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
   end
 
   create_table "profiles", :force => true do |t|
@@ -92,14 +99,14 @@ ActiveRecord::Schema.define(:version => 12) do
   add_index "users", ["profile_id"], :name => "fk_users_profiles"
 
   create_table "vehicles", :force => true do |t|
-    t.integer  "amount",          :limit => 10, :precision => 10, :scale => 0
+    t.float    "amount"
     t.string   "note"
-    t.datetime "year"
-    t.datetime "model"
     t.integer  "doors"
     t.integer  "finale"
     t.string   "km"
     t.integer  "car_id"
+    t.integer  "year_id"
+    t.integer  "model_id"
     t.integer  "color_id"
     t.integer  "gear_id"
     t.integer  "fuel_id"
@@ -113,5 +120,9 @@ ActiveRecord::Schema.define(:version => 12) do
   add_index "vehicles", ["fuel_id"], :name => "fk_vehicles_fuels"
   add_index "vehicles", ["gear_id"], :name => "fk_vehicles_gears"
   add_index "vehicles", ["type_vehicle_id"], :name => "fk_vehicles_type_vehicles"
+
+  create_table "years", :force => true do |t|
+    t.string "description"
+  end
 
 end

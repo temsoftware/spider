@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  layout "admin"
+
   active_scaffold :user do |item|
     item.label = "Usuário"
     item.columns = [:name, :login, :active, :pass, :created_at]

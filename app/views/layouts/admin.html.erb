@@ -1,0 +1,38 @@
+<head>
+<title>SisCog - Sistema de Controle Geral</title>
+  <%= stylesheet_link_tag 'default' %>
+  <%= stylesheet_link_tag 'lightbox'%>
+
+  <%= javascript_include_tag :defaults %>
+
+    <%= stylesheet_link_tag "/javascripts/jscalendar-1.0/calendar-win2k-cold-1.css" %>
+    <%= javascript_include_tag "jscalendar-1.0/calendar.js" %>
+    <%= javascript_include_tag "jscalendar-1.0/lang/calendar-br.js" %>
+    <%= javascript_include_tag "jscalendar-1.0/calendar-setup.js" %>
+
+  <%= active_scaffold_includes %>
+</head>
+
+<body class ="bg_siscog">
+<div id="wrap">
+  <div id="header">
+    <p id="toplinks">Bem vindo(a) <%=session[:login]%>! - <%=link_to "Logout", session_path(session[:id]), :method => :delete%> </p>
+    <h1>Sis<span class="fade">Cog</span></h1>
+    <p id="slogan">Gerenciando seu negocio de forma inteligente.</p>
+  </div>
+
+  <div id="content">    <%=yield%>
+  </div>
+
+  <div id="sidebar">
+    <%=render :partial => "layouts/menu"%>
+  </div>
+
+  <div id="footer">
+      &copy; 2009 SisCog | Ricar Automóveis | Desenvolvido por TEM Software</p>
+  </div>
+
+</div>
+</body>
+</html>
+

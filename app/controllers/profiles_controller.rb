@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+  layout "admin"
+
   active_scaffold :profile do |item|
     item.label = "Perfil"
     item.columns = [:description, :created_at, :updated_at]

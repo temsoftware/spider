@@ -10,11 +10,11 @@ class SessionsController < ApplicationController
                        :conditions => ["login = ? and pass = ?",
                                       params[:user][:login].capitalize!, params[:user][:pass]])
     if @user
-      if @user.siscog
+      if @user.active
         session[:logged] = true
         session[:id] = @user.id
         session[:login] = @user.login
-        redirect_to :controller => "main"
+        redirect_to :controller => "main", :layout => "admin"
       else
         flash[:notice] = "Seu usuario encontrasse bloqueado. Entre em contato com o Administrador do sistema."
         render :action => "new" , :layout => "login"

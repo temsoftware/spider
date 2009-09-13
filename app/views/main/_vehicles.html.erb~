@@ -1,0 +1,11 @@
+
+                    <div id="carro_listado_2" class="veiculo_listado">
+                        <span id="carro_foto">
+                            <img src="images/carro_listado.jpg" class="veiculo_foto"/>
+                        </span>
+                        <span id="carro_descricao" class="carro_descricao">
+                           <label>Chevrolet Astra 2.0 Advantage 8V FlexPower 4P Manual 2009-2009</label><br>
+                           <label class="carro_preco">R$ 45.800,00</label>
+                           <label class="veiculo_saiba_mais">Saiba Mais</label>
+                        </span>
+                    </div>

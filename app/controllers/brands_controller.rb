@@ -1,4 +1,6 @@
 class BrandsController < ApplicationController
+  layout "admin"
+
   active_scaffold :brand do |item|
     item.label = "Marcas"
     item.columns = [:name, :created_at]

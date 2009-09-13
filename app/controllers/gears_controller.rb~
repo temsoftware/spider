@@ -7,7 +7,4 @@ class GearsController < ApplicationController
 
     item.actions.exclude :show
   end
-def to_label
-    "#{name}"
-  end
 end

@@ -77,6 +77,29 @@ insert into options (description) values ("VIDRO ELETRICO");
 insert into options (description) values ("TRAVA ELETRICA");
 insert into options (description) values ("AR CONDICIONADO");
 
+insert into years (description) values ("2000");
+insert into years (description) values ("2001");
+insert into years (description) values ("2002");
+insert into years (description) values ("2003");
+insert into years (description) values ("2004");
+insert into years (description) values ("2005");
+insert into years (description) values ("2006");
+insert into years (description) values ("2007");
+insert into years (description) values ("2008");
+insert into years (description) values ("2009");
+
+insert into models (description) values ("2000");
+insert into models (description) values ("2001");
+insert into models (description) values ("2002");
+insert into models (description) values ("2003");
+insert into models (description) values ("2004");
+insert into models (description) values ("2005");
+insert into models (description) values ("2006");
+insert into models (description) values ("2007");
+insert into models (description) values ("2008");
+insert into models (description) values ("2009");
+
+
 /*CARROS A VENDA*/
 /*
 insert into vehicles (amount, note, year, model, doors, finale, km, 

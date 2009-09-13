@@ -1,15 +1,15 @@
 class CreateVehicles < ActiveRecord::Migration
   def self.up
     create_table :vehicles do |t|
-      t.decimal  :amount
-      t.string   :note
-      t.datetime :year
-      t.datetime :model
-      t.integer  :doors
-      t.integer  :finale
-      t.string   :km
+      t.float   :amount
+      t.string  :note
+      t.integer :doors
+      t.integer :finale
+      t.string  :km
 
       t.references :car
+      t.references :year
+      t.references :model
       t.references :color
       t.references :gear
       t.references :fuel

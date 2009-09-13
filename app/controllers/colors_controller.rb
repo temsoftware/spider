@@ -1,4 +1,6 @@
 class ColorsController < ApplicationController
+  layout "admin"
+
  active_scaffold :color do |item|
     item.label = "Cores"
     item.columns = [:name, :created_at]

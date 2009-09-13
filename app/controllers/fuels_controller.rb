@@ -1,4 +1,6 @@
 class FuelsController < ApplicationController
+  layout "admin"
+
   active_scaffold :fuel do |item|
     item.label = "Combustível"
     item.columns = [:name, :created_at]

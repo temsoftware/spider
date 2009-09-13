@@ -1,4 +1,6 @@
 class CarsController < ApplicationController
+  layout "admin"
+
   active_scaffold :cars do |item|
     item.label = "Modelos"
     item.columns = [:name, :created_at]
