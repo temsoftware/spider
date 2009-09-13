@@ -13,6 +13,9 @@ class Vehicle < ActiveRecord::Base
   has_many :option, :through => :options_vehicle
   has_many :picture
 
+  named_scope :carros, { :conditions => ["type_vehicle_id = 1"]}
+  named_scope :motos, { :conditions => ["type_vehicle_id = 3"]}
+
   #validates_presence_of :amount
   #validates_presence_of :note
   #validates_presence_of :year

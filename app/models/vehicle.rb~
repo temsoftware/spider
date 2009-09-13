@@ -13,6 +13,9 @@ class Vehicle < ActiveRecord::Base
   has_many :option, :through => :options_vehicle
   has_many :picture
 
+  named_scope :carros, lambda { :conditions => ["type_vehicle_id = 1"]}
+  named_scope :motos, lambda { :conditions => ["type_vehicle_id = 3"]}
+
   #validates_presence_of :amount
   #validates_presence_of :note
   #validates_presence_of :year
@@ -26,26 +29,6 @@ class Vehicle < ActiveRecord::Base
   #validates_presence_of :fuel
   #validates_presence_of :type_vehicle
 
-  #has_attached_file :picture2, :styles => { :thumbnail => "140x140>"},
-   #                 :url => "/uploads/pictures/:id/picture2_:style.:extension",
-    #                :path => ":rails_root/public/uploads/pictures/:id/picture2_:style.:extension"
-
-  #has_attached_file :picture3, :styles => { :thumbnail => "140x140>"},
-   #                 :url => "/uploads/pictures/:id/picture3_:style.:extension",
-    #                :path => ":rails_root/public/uploads/pictures/:id/picture3_:style.:extension"
-
-  #has_attached_file :picture4, :styles => { :thumbnail => "140x140>"},
-   #                 :url => "/uploads/pictures/:id/picture4_:style.:extension",
-    #                :path => ":rails_root/public/uploads/pictures/:id/picture4_:style.:extension"
-
-  #has_attached_file :picture5, :styles => { :thumbnail => "140x140>"},
-   #                  :url => "/uploads/pictures/:id/picture5_:style.:extension",
-    #                :path => ":rails_root/public/uploads/pictures/:id/picture5_:style.:extension"
-
-  #has_attached_file :picture6, :styles => { :thumbnail => "140x140>"},
-   #                 :url => "/uploads/pictures/:id/picture6_:style.:extension",
-    #                :path => ":rails_root/public/uploads/pictures/:id/picture6_:style.:extension"
-
   def to_label
     "#{car.brand.name} #{car.name} #{color.name} #{year} / #{model}"
   end
@@ -53,5 +36,4 @@ class Vehicle < ActiveRecord::Base
   def amount_to_float
      number_with_precision("#{amount}", :precision => 5)
   end
-
 end

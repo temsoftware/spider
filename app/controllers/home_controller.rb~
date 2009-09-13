@@ -4,8 +4,8 @@ class HomeController < ApplicationController
   layout "ricar"
 
   def index
-    @cars = Vehicle.all, :conditions => ["type_vehicle_id = 1"]
-    @bikes = Vehicle.all, :conditions => ["type_vehicle_id = 3"]
+    @cars = Vehicle.all(:conditions => ["type_vehicle_id = 1"])
+    @bikes = Vehicle.all(:conditions => ["type_vehicle_id = 3"])
   end
 
 end

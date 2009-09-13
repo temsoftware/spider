@@ -43011,3 +43011,205 @@ Rendered home/_vehicles (70.9ms)
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `models` WHERE (`models`.`id` = 1) [0m
 Rendered home/_bikes (4.5ms)
 Completed in 207ms (View: 77, DB: 7) | 200 OK [http://localhost/home]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mVehicle Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+
+Processing VehiclesController#edit (for 127.0.0.1 at 2009-09-13 06:45:12) [GET]
+  Parameters: {"authenticity_token"=>"uGdj7VH4/MwCQZSVGHSc63Y8NXhFKbCl4JCgKs9Hbxw=", "adapter"=>"_list_inline_adapter", "id"=>"2"}
+  [4;35;1mVehicle Load (0.5ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 2) [0m
+  [4;36;1mCar Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `cars`[0m
+  [4;35;1mCar Load (0.1ms)[0m   [0mSELECT * FROM `cars` WHERE (`cars`.`id` = 13) [0m
+  [4;36;1mBrand Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `brands`[0m
+  [4;35;1mBrand Load (0.1ms)[0m   [0mSELECT * FROM `brands` WHERE (`brands`.`id` = 5) [0m
+  [4;36;1mColor Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `colors`[0m
+  [4;35;1mColor Load (0.1ms)[0m   [0mSELECT * FROM `colors` WHERE (`colors`.`id` = 6) [0m
+  [4;36;1mYear Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `years`[0m
+  [4;35;1mYear Load (0.1ms)[0m   [0mSELECT * FROM `years` WHERE (`years`.`id` = 10) [0m
+  [4;36;1mModel Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `models`[0m
+  [4;35;1mModel Load (0.1ms)[0m   [0mSELECT * FROM `models` WHERE (`models`.`id` = 1) [0m
+  [4;36;1mCar Load (0.1ms)[0m   [0;1mSELECT * FROM `cars` [0m
+  [4;35;1mBrand Load (0.1ms)[0m   [0mSELECT * FROM `brands` WHERE (`brands`.`id` = 1) [0m
+  [4;36;1mBrand Load (0.2ms)[0m   [0;1mSELECT * FROM `brands` WHERE (`brands`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `brands` WHERE (`brands`.`id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `brands` WHERE (`brands`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `brands` WHERE (`brands`.`id` = 1) [0m
+  [4;36;1mBrand Load (0.1ms)[0m   [0;1mSELECT * FROM `brands` WHERE (`brands`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `brands` WHERE (`brands`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `brands` WHERE (`brands`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `brands` WHERE (`brands`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `brands` WHERE (`brands`.`id` = 3) [0m
+  [4;35;1mBrand Load (0.2ms)[0m   [0mSELECT * FROM `brands` WHERE (`brands`.`id` = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `brands` WHERE (`brands`.`id` = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `brands` WHERE (`brands`.`id` = 4) [0m
+Rendered _form_attribute (34.6ms)
+  [4;36;1mTypeVehicle Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `type_vehicles`[0m
+  [4;35;1mTypeVehicle Load (0.1ms)[0m   [0mSELECT * FROM `type_vehicles` WHERE (`type_vehicles`.`id` = 3) [0m
+  [4;36;1mTypeVehicle Load (0.1ms)[0m   [0;1mSELECT * FROM `type_vehicles` [0m
+Rendered _form_attribute (16.8ms)
+  [4;35;1mYear Load (0.1ms)[0m   [0mSELECT * FROM `years` [0m
+Rendered _form_attribute (3.7ms)
+  [4;36;1mModel Load (0.2ms)[0m   [0;1mSELECT * FROM `models` [0m
+Rendered _form_attribute (4.6ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (1.0ms)
+Rendered _form_attribute (0.9ms)
+  [4;35;1mColor Load (0.1ms)[0m   [0mSELECT * FROM `colors` [0m
+Rendered _form_attribute (3.0ms)
+  [4;36;1mFuel Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `fuels`[0m
+  [4;35;1mFuel Load (0.1ms)[0m   [0mSELECT * FROM `fuels` WHERE (`fuels`.`id` = 4) [0m
+  [4;36;1mFuel Load (0.1ms)[0m   [0;1mSELECT * FROM `fuels` [0m
+Rendered _form_attribute (14.0ms)
+  [4;35;1mGear Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `gears`[0m
+  [4;36;1mGear Load (0.1ms)[0m   [0;1mSELECT * FROM `gears` WHERE (`gears`.`id` = 2) [0m
+  [4;35;1mGear Load (0.1ms)[0m   [0mSELECT * FROM `gears` [0m
+Rendered _form_attribute (15.5ms)
+Rendered _form (122.0ms)
+Rendered _update_form (255.3ms)
+Rendered _messages (1.9ms)
+Rendered _list_inline_adapter (10.2ms)
+Completed in 326ms (View: 15, DB: 0) | 200 OK [http://localhost/vehicles/2/edit?_method=get&authenticity_token=uGdj7VH4%2FMwCQZSVGHSc63Y8NXhFKbCl4JCgKs9Hbxw%3D&adapter=_list_inline_adapter]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mVehicle Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+
+Processing VehiclesController#update (for 127.0.0.1 at 2009-09-13 06:45:26) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"uGdj7VH4/MwCQZSVGHSc63Y8NXhFKbCl4JCgKs9Hbxw=", "id"=>"2", "record"=>{"model"=>{"id"=>"4"}, "km"=>"0", "fuel"=>{"id"=>"4"}, "amount"=>"80.000", "color"=>{"id"=>"6"}, "year"=>{"id"=>"10"}, "type_vehicle"=>{"id"=>"3"}, "gear"=>{"id"=>"2"}, "doors"=>"0", "car"=>{"id"=>"13"}}}
+  [4;35;1mVehicle Load (0.1ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCar Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `cars`[0m
+  [4;36;1mCar Load (0.1ms)[0m   [0;1mSELECT * FROM `cars` WHERE (`cars`.`id` = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `cars` WHERE (`cars`.`id` = 13) [0m
+  [4;36;1mTypeVehicle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `type_vehicles`[0m
+  [4;35;1mTypeVehicle Load (0.1ms)[0m   [0mSELECT * FROM `type_vehicles` WHERE (`type_vehicles`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `type_vehicles` WHERE (`type_vehicles`.`id` = 3) [0m
+  [4;35;1mYear Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `years`[0m
+  [4;36;1mYear Load (0.1ms)[0m   [0;1mSELECT * FROM `years` WHERE (`years`.`id` = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `years` WHERE (`years`.`id` = 10) [0m
+  [4;36;1mModel Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `models`[0m
+  [4;35;1mModel Load (0.5ms)[0m   [0mSELECT * FROM `models` WHERE (`models`.`id` = 4) [0m
+  [4;36;1mModel Load (0.1ms)[0m   [0;1mSELECT * FROM `models` WHERE (`models`.`id` = 1) [0m
+  [4;35;1mColor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `colors`[0m
+  [4;36;1mColor Load (0.2ms)[0m   [0;1mSELECT * FROM `colors` WHERE (`colors`.`id` = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `colors` WHERE (`colors`.`id` = 6) [0m
+  [4;36;1mFuel Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `fuels`[0m
+  [4;35;1mFuel Load (0.1ms)[0m   [0mSELECT * FROM `fuels` WHERE (`fuels`.`id` = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `fuels` WHERE (`fuels`.`id` = 4) [0m
+  [4;35;1mGear Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `gears`[0m
+  [4;36;1mGear Load (0.1ms)[0m   [0;1mSELECT * FROM `gears` WHERE (`gears`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `gears` WHERE (`gears`.`id` = 2) [0m
+  [4;36;1mVehicle Update (0.4ms)[0m   [0;1mUPDATE `vehicles` SET `updated_at` = '2009-09-13 09:45:26', `model_id` = 4, `amount` = 80.0 WHERE `id` = 2[0m
+  [4;35;1mSQL (151.9ms)[0m   [0mCOMMIT[0m
+Rendering on_update
+Rendered _messages (2.1ms)
+Completed in 325ms (View: 75, DB: 161) | 200 OK [http://localhost/vehicles/2?authenticity_token=uGdj7VH4%2FMwCQZSVGHSc63Y8NXhFKbCl4JCgKs9Hbxw%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mVehicle Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+
+Processing VehiclesController#row (for 127.0.0.1 at 2009-09-13 06:45:27) [GET]
+  Parameters: {"authenticity_token"=>"uGdj7VH4/MwCQZSVGHSc63Y8NXhFKbCl4JCgKs9Hbxw=", "id"=>"2"}
+  [4;35;1mVehicle Load (0.4ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 2) [0m
+  [4;36;1mCar Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `cars`[0m
+  [4;35;1mCar Load (0.1ms)[0m   [0mSELECT * FROM `cars` WHERE (`cars`.`id` = 13) [0m
+  [4;36;1mBrand Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `brands`[0m
+  [4;35;1mBrand Load (0.1ms)[0m   [0mSELECT * FROM `brands` WHERE (`brands`.`id` = 5) [0m
+  [4;36;1mTypeVehicle Columns (9.4ms)[0m   [0;1mSHOW FIELDS FROM `type_vehicles`[0m
+  [4;35;1mTypeVehicle Load (0.1ms)[0m   [0mSELECT * FROM `type_vehicles` WHERE (`type_vehicles`.`id` = 3) [0m
+  [4;36;1mYear Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `years`[0m
+  [4;35;1mYear Load (0.1ms)[0m   [0mSELECT * FROM `years` WHERE (`years`.`id` = 10) [0m
+  [4;36;1mModel Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `models`[0m
+  [4;35;1mModel Load (0.1ms)[0m   [0mSELECT * FROM `models` WHERE (`models`.`id` = 4) [0m
+  [4;36;1mColor Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `colors`[0m
+  [4;35;1mColor Load (0.1ms)[0m   [0mSELECT * FROM `colors` WHERE (`colors`.`id` = 6) [0m
+  [4;36;1mFuel Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `fuels`[0m
+  [4;35;1mFuel Load (0.1ms)[0m   [0mSELECT * FROM `fuels` WHERE (`fuels`.`id` = 4) [0m
+  [4;36;1mGear Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `gears`[0m
+  [4;35;1mGear Load (0.1ms)[0m   [0mSELECT * FROM `gears` WHERE (`gears`.`id` = 2) [0m
+Rendered _list_actions (5.6ms)
+Rendered _list_record (139.4ms)
+Completed in 183ms (View: 162, DB: 19) | 200 OK [http://localhost/vehicles/2/row?_method=get&authenticity_token=uGdj7VH4%2FMwCQZSVGHSc63Y8NXhFKbCl4JCgKs9Hbxw%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-09-13 06:45:28) [GET]
+  [4;36;1mVehicle Load (0.6ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (type_vehicle_id = 1) [0m
+  [4;35;1mVehicle Load (0.5ms)[0m   [0mSELECT * FROM `vehicles` WHERE (type_vehicle_id = 3) [0m
+Rendering template within layouts/ricar
+Rendering home/index
+  [4;36;1mVehicle Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mCar Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `cars`[0m
+  [4;36;1mCar Load (0.1ms)[0m   [0;1mSELECT * FROM `cars` WHERE (`cars`.`id` = 5) [0m
+  [4;35;1mBrand Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `brands`[0m
+  [4;36;1mBrand Load (0.1ms)[0m   [0;1mSELECT * FROM `brands` WHERE (`brands`.`id` = 2) [0m
+  [4;35;1mGear Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `gears`[0m
+  [4;36;1mGear Load (0.1ms)[0m   [0;1mSELECT * FROM `gears` WHERE (`gears`.`id` = 2) [0m
+  [4;35;1mYear Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `years`[0m
+  [4;36;1mYear Load (0.1ms)[0m   [0;1mSELECT * FROM `years` WHERE (`years`.`id` = 1) [0m
+  [4;35;1mModel Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `models`[0m
+  [4;36;1mModel Load (0.1ms)[0m   [0;1mSELECT * FROM `models` WHERE (`models`.`id` = 1) [0m
+Rendered home/_vehicles (74.2ms)
+  [4;35;1mCar Load (0.2ms)[0m   [0mSELECT * FROM `cars` WHERE (`cars`.`id` = 13) [0m
+  [4;36;1mBrand Load (0.1ms)[0m   [0;1mSELECT * FROM `brands` WHERE (`brands`.`id` = 5) [0m
+  [4;35;1mYear Load (0.1ms)[0m   [0mSELECT * FROM `years` WHERE (`years`.`id` = 10) [0m
+  [4;36;1mModel Load (0.1ms)[0m   [0;1mSELECT * FROM `models` WHERE (`models`.`id` = 4) [0m
+Rendered home/_bikes (5.5ms)
+Completed in 211ms (View: 83, DB: 8) | 200 OK [http://localhost/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-09-13 06:53:45) [GET]
+
+SyntaxError (/media/marco/Ruby/spider/app/models/vehicle.rb:16: syntax error, unexpected tASSOC, expecting '}'
+...arros, lambda { :conditions => ["type_vehicle_id = 1"]}
+                              ^
+/media/marco/Ruby/spider/app/models/vehicle.rb:17: syntax error, unexpected tASSOC, expecting '}'
+  named_scope :motos, lambda { :conditions => ["type_vehicle_id = 3"]}
+                                             ^):
+  app/controllers/home_controller.rb:7:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-09-13 06:55:18) [GET]
+Rendering template within layouts/ricar
+Rendering home/index
+  [4;35;1mVehicle Load (0.2ms)[0m   [0mSELECT * FROM `vehicles` WHERE (type_vehicle_id = 1) [0m
+  [4;36;1mVehicle Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mCar Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `cars`[0m
+  [4;36;1mCar Load (0.1ms)[0m   [0;1mSELECT * FROM `cars` WHERE (`cars`.`id` = 5) [0m
+  [4;35;1mBrand Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `brands`[0m
+  [4;36;1mBrand Load (0.1ms)[0m   [0;1mSELECT * FROM `brands` WHERE (`brands`.`id` = 2) [0m
+  [4;35;1mGear Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `gears`[0m
+  [4;36;1mGear Load (0.1ms)[0m   [0;1mSELECT * FROM `gears` WHERE (`gears`.`id` = 2) [0m
+  [4;35;1mYear Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `years`[0m
+  [4;36;1mYear Load (0.1ms)[0m   [0;1mSELECT * FROM `years` WHERE (`years`.`id` = 1) [0m
+  [4;35;1mModel Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `models`[0m
+  [4;36;1mModel Load (0.1ms)[0m   [0;1mSELECT * FROM `models` WHERE (`models`.`id` = 1) [0m
+Rendered home/_vehicles (68.7ms)
+  [4;35;1mVehicle Load (0.1ms)[0m   [0mSELECT * FROM `vehicles` WHERE (type_vehicle_id = 3) [0m
+  [4;36;1mCar Load (0.1ms)[0m   [0;1mSELECT * FROM `cars` WHERE (`cars`.`id` = 13) [0m
+  [4;35;1mBrand Load (0.1ms)[0m   [0mSELECT * FROM `brands` WHERE (`brands`.`id` = 5) [0m
+  [4;36;1mYear Load (0.1ms)[0m   [0;1mSELECT * FROM `years` WHERE (`years`.`id` = 10) [0m
+  [4;35;1mModel Load (0.1ms)[0m   [0mSELECT * FROM `models` WHERE (`models`.`id` = 4) [0m
+Rendered home/_bikes (4.5ms)
+Completed in 96ms (View: 75, DB: 7) | 200 OK [http://localhost/home]
