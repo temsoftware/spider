@@ -99,6 +99,11 @@ insert into models (description) values ("2007");
 insert into models (description) values ("2008");
 insert into models (description) values ("2009");
 
+INSERT INTO partners (name,site,image) VALUES ('Ricar Locadora'         ,'','images/ricar_logo.jpg');
+INSERT INTO partners (name,site,image) VALUES ('Ricar'                  ,'','images/ricar_trasp_logo.jpg');
+INSERT INTO partners (name,site,image) VALUES ('JC Corretora Seguros'   ,'','images/corretora_logo.jpg');
+INSERT INTO partners (name,site,image) VALUES ('Tem Software'           ,'','images/tem_logo.jpg');
+
 
 /*CARROS A VENDA*/
 /*

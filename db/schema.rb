@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 15) do
+ActiveRecord::Schema.define(:version => 16) do
 
   create_table "brands", :force => true do |t|
     t.string   "name"
@@ -63,6 +63,14 @@ ActiveRecord::Schema.define(:version => 15) do
 
   add_index "options_vehicles", ["option_id"], :name => "fk_options_vehicles_options"
   add_index "options_vehicles", ["vehicle_id"], :name => "fk_options_vehicles_vehicles"
+
+  create_table "partners", :force => true do |t|
+    t.string   "name"
+    t.string   "site"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pictures", :force => true do |t|
     t.integer  "vehicle_id"
