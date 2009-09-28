@@ -1,0 +1,12 @@
+<div id="parceiros" class="menu_direita_element">
+    <div id="parceiros_top" class="menu_direita_top">
+        <label id="parceiros_label" class="menu_direita_label">Parceiros</label>
+    </div>
+    <div id="parceiros_medium" class="menu_direita_medium">
+        <% for item in @partners %>
+            <img src="<%= item.image%>" class="menu_direita_imgs" alt="<%= item.name %>" ><br/>
+        <% end %>
+    </div>
+    <div id="parceiros_footter" class="menu_direita_footter">
+    </div>
+</div>
