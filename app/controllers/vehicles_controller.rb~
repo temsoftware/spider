@@ -26,6 +26,8 @@ class VehiclesController < ApplicationController
     item.columns[:option].label = "Opcionais"
     item.columns[:option].form_ui = :select
     item.columns[:created_at].label = "Criado em"
+    item.columns[:picture].label = "Imagens"
+    item.create.multipart = true
 
     # item.columns[:car].search_sql = 'cars.name'
     # item.columns[:car].search_sql = 'brands.name'

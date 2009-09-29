@@ -34,6 +34,7 @@ class VehiclesController < ApplicationController
   
     item.create.columns.exclude :options_vehicle
     item.actions.exclude :nested
+    item.create.multipart = true
     item.create.columns = [:type_vehicle, :car, :year, :model, :amount, :km, :doors, :finale, :note, :color, 
                      :fuel, :gear, :option, :picture]
     item.show.columns = [:car, :model, :year, :color, :fuel, :gear, :picture]

@@ -8,14 +8,14 @@ class Vehicle < ActiveRecord::Base
   belongs_to :color
 
  # has_many   :option, :through => :option_vehicle
-  has_many :picture
+  has_many :picture, :dependent => :destroy
+  has_many :option,  :through =>   :options_vehicle
   has_many :options_vehicle
-  has_many :option, :through => :options_vehicle
-  has_many :picture
 
-  named_scope :carros,  { :conditions => ["type_vehicle_id = 1"]}
-  named_scope :motos,   { :conditions => ["type_vehicle_id = 3"]}
-  named_scope :taxis,   { :conditions => ["type_vehicle_id = 2"]}
+  named_scope :carros, { :conditions => ["type_vehicle_id = 1"]}
+  named_scope :motos,  { :conditions => ["type_vehicle_id = 3"]}
+  named_scope :taxis,  { :conditions => ["type_vehicle_id = 2"]}
+
   #validates_presence_of :amount
   #validates_presence_of :note
   #validates_presence_of :year
@@ -36,4 +36,5 @@ class Vehicle < ActiveRecord::Base
   def amount_to_float
      number_with_precision("#{amount}", :precision => 5)
   end
+
 end

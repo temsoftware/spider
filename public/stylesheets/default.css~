@@ -51,7 +51,7 @@ body{
 	font-family:Verdana, Geneva, sans-serif;
 }
 #banner_site{
-	background-image:url(images/banner_site.jpg);
+	background-image:url(../images/banner_site.jpg);
 	background-repeat:no-repeat;
 	height:237px;
 	left:120px;

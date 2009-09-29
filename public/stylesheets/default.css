@@ -1,5 +1,5 @@
 * {
-	margin: 0;
+  margin: 0;
 	padding: 0;
 }
 
@@ -14,8 +14,8 @@ body{
 	clear:both;
 }
 #fundo_pag{
-    background-image:url(../images/bg_pag.gif);
-    background-repeat:repeat-y;
+  background-image:url(../images/bg_pag.gif);
+  background-repeat:repeat-y;
 }
 #img_top{
 	position:relative;
