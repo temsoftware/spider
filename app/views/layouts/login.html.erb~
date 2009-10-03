@@ -16,9 +16,8 @@
 
 <%=yield%>
 
-  <div id="footer">
-      &copy; 2009 Instituto de Beleza Clara | Desenvolvido por:  TEM Software</p>
-  </div>
+
+ <%=render :partial => "rodape"%>
 
 </div>
 </body>
