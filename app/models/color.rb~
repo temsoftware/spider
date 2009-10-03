@@ -1,6 +1,6 @@
 class Color < ActiveRecord::Base
   has_many :vehicle
 
-  validates_uniqueness_of :name, :case_sensitive => :true
+  validates_uniqueness_of :name, :case_sensitive => :false, :message => "Cor já cadastrada! Verifique!"
   validates_presence_of :name
 end
