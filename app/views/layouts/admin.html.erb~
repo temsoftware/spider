@@ -13,7 +13,7 @@
   <%= active_scaffold_includes %>
 </head>
 
-<body>
+<body class ="bg_siscog">
 <div id="wrap">
   <div id="header">
     <p id="toplinks">Bem vindo(a) <%=session[:login]%>! - <%=link_to "Logout", session_path(session[:id]), :method => :delete%> </p>
@@ -28,9 +28,7 @@
     <%=render :partial => "layouts/menu"%>
   </div>
 
-  <div id="footer">
-      &copy; 2009 SisCog | Ricar Automóveis | Desenvolvido por TEM Software</p>
-  </div>
+ <%=render :partial => "rodape"%>
 
 </div>
 </body>
