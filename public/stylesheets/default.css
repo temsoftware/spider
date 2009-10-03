@@ -12,6 +12,7 @@ body{
 	background-repeat:no-repeat;
 	height:60px;
 	clear:both;
+	width:1000px;
 }
 #fundo_pag{
   background-image:url(../images/bg_pag.gif);
@@ -162,7 +163,7 @@ body{
 .menu_direita_imgs{
     margin-bottom:4px;
     margin-top:4px;
-    
+
 }
 .menu_direita_element{
     margin-bottom:15px;
@@ -190,7 +191,7 @@ a {
 }
 
 a:hover {
-  text-decoration:underline; 
+  text-decoration:underline;
   color:#800000;
 }
 a img{border:0;}
@@ -376,7 +377,7 @@ input {
 	border: 1px solid #000000;
 	margin-bottom: 5px;
 }
-	
+
 #show ul li {
 	font-size:1.2em;
 	list-style-type: none;
