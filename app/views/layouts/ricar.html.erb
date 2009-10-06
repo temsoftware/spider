@@ -9,14 +9,14 @@
 <body>
     <div id="fundo_pag">
       <div id="fundo_pag_top">
-    	  <span id="img_top"><img src="images/top_logo.jpg" /></span>
+    	  <span id="img_top"><img src="../images/top_logo.jpg" /></span>
     	    <div id="menu_top">
             <span id="menu_options">
               <ul>
-                <li>HOME</li>
-                <li>TAXI</li>
-                <li>CARRO</li>
-                <li>MOTO</li>
+                <li><%= link_to "HOME"  , :controller=> 'home'%></li>
+                <li><%= link_to "TAXI"  , :controller=> 'list_vehicles', :action => 'show' ,:id => 2%></li>
+                <li><%= link_to "CARRO" , :controller=> 'list_vehicles', :action => 'show' ,:id => 1%></li>
+                <li><%= link_to "MOTO"  , :controller=> 'list_vehicles', :action => 'show' ,:id => 3%></li>
                 <li>FINANCIAMENTO</li>
                 <li>ENDERECO</li>
                 <li>CONTATO</li>
@@ -25,7 +25,20 @@
           </div>
       <div id="banner_site"></div>
     </div> <!-- fundo_pag_top -->
+    <div id="conteudo">
+
     <%= yield%>
+
+      <div id="menu_direita">
+
+        <%= render :partial => "layouts/partners" %>
+
+        <%= render :partial => "layouts/stores" %>
+
+      </div>
+
+      <div id="fundo_pag_footer">
+      </div>
   </div>
 </body>
 

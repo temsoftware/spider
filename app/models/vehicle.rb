@@ -16,6 +16,8 @@ class Vehicle < ActiveRecord::Base
   named_scope :motos,  { :conditions => ["type_vehicle_id = 3"]}
   named_scope :taxis,  { :conditions => ["type_vehicle_id = 2"]}
 
+  named_scope :lista, lambda { |id|  { :conditions => ["type_vehicle_id = ?",id]}}
+
   #validates_presence_of :amount
   #validates_presence_of :note
   #validates_presence_of :year
@@ -38,3 +40,4 @@ class Vehicle < ActiveRecord::Base
   end
 
 end
+

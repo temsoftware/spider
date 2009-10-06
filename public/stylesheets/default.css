@@ -72,6 +72,13 @@ body{
     top:5px;
     width:340px;
 }
+#vehicles_list{
+    float:left;
+    left:120px;
+    position:relative;
+    top:5px;
+    width:680px;
+}
 #moto{
     float:left;
     left:115px;
