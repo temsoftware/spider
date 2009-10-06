@@ -104,65 +104,68 @@ INSERT INTO partners (name,site,image) VALUES ('Ricar'                  ,'','ima
 INSERT INTO partners (name,site,image) VALUES ('JC Corretora Seguros'   ,'','images/corretora_logo.jpg');
 INSERT INTO partners (name,site,image) VALUES ('Tem Software'           ,'','images/tem_logo.jpg');
 
+INSERT INTO `stores` VALUES (1,'Loja 1','Rua Joaquim Carlos',1119,'Pari',NULL,'São Paulo','SP','2009-10-03 19:34:24','2009-10-03 19:34:24');
+INSERT INTO `stores` VALUES (2,'Loja 2','Rua Silva Tele',1341,'Pari',NULL,'São Paulo','SP','2009-10-03 19:35:49','2009-10-03 19:35:49');
+INSERT INTO `stores` VALUES (3,'Loja 3','Rua Silva Teles',1341,'Pari',NULL,'São Paulo','SP','2009-10-03 19:36:47','2009-10-03 19:58:33');
 
 /*CARROS A VENDA*/
 /*
-insert into vehicles (amount, note, year, model, doors, finale, km, 
+insert into vehicles (amount, note, year, model, doors, finale, km,
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
    1, 5, 3, 4, 1);
 
-insert into vehicles (amount, note, year, model, doors, finale, km, 
+insert into vehicles (amount, note, year, model, doors, finale, km,
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
    2, 5, 3, 4, 1);
 
-insert into vehicles (amount, note, year, model, doors, finale, km, 
+insert into vehicles (amount, note, year, model, doors, finale, km,
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
    3, 5, 3, 4, 1);
 
-insert into vehicles (amount, note, year, model, doors, finale, km, 
+insert into vehicles (amount, note, year, model, doors, finale, km,
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
    4, 5, 3, 4, 1);
 
-insert into vehicles (amount, note, year, model, doors, finale, km, 
+insert into vehicles (amount, note, year, model, doors, finale, km,
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
    5, 5, 3, 4, 1);
 
-insert into vehicles (amount, note, year, model, doors, finale, km, 
+insert into vehicles (amount, note, year, model, doors, finale, km,
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
    6, 5, 3, 4, 1);
 
-insert into vehicles (amount, note, year, model, doors, finale, km, 
+insert into vehicles (amount, note, year, model, doors, finale, km,
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
    7, 5, 3, 4, 1);
 
-insert into vehicles (amount, note, year, model, doors, finale, km, 
+insert into vehicles (amount, note, year, model, doors, finale, km,
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
    8, 5, 3, 4, 1);
 
-insert into vehicles (amount, note, year, model, doors, finale, km, 
+insert into vehicles (amount, note, year, model, doors, finale, km,
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
    9, 5, 3, 4, 1);
 
-insert into vehicles (amount, note, year, model, doors, finale, km, 
+insert into vehicles (amount, note, year, model, doors, finale, km,
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
    10, 5, 3, 4, 1);
 
-insert into vehicles (amount, note, year, model, doors, finale, km, 
+insert into vehicles (amount, note, year, model, doors, finale, km,
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
    11, 5, 3, 4, 1);
 
-insert into vehicles (amount, note, year, model, doors, finale, km, 
+insert into vehicles (amount, note, year, model, doors, finale, km,
 car_id, color_id, gear_id, fuel_id, type_vehicle_id)
   values (10000, "lindo e maravilhoso", '2009-01-01', '2010-01-01', 5, 7, "1.000",
    12, 5, 3, 4, 1);

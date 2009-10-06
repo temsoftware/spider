@@ -1,9 +1,9 @@
 class AddAttachmentsDataToPicture < ActiveRecord::Migration
   def self.up
-    add_column :pictures, :data_file_name,    :string
+    add_column :pictures, :data_file_name, :string
     add_column :pictures, :data_content_type, :string
-    add_column :pictures, :data_file_size,    :integer
-    add_column :pictures, :data_updated_at,   :datetime
+    add_column :pictures, :data_file_size, :integer
+    add_column :pictures, :data_updated_at, :datetime
   end
 
   def self.down
@@ -13,3 +13,4 @@ class AddAttachmentsDataToPicture < ActiveRecord::Migration
     remove_column :pictures, :data_updated_at
   end
 end
+

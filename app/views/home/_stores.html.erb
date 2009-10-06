@@ -1,0 +1,13 @@
+<% for store in @stores %>
+  <div id="enderecos_<%= store.id%>" class="menu_direita_element">
+      <div id="enderecos_top" class="menu_direita_top">
+        <label id="enderecos_label" class="menu_direita_label"><%= store.name %></label>
+      </div>
+      <div id="enderecos_medium" class="menu_direita_medium">
+        <label id="end_loja_<%= store.id%>" class="label_loja"><%= store.street%>, <%= store.number%> - <%= store.neighborhood%> - <%= store.city%> - <%= store.state%></label>
+      </div>
+      <div id="enderecos_footter" class="menu_direita_footter">
+      </div>
+  </div>
+<% end %>
+

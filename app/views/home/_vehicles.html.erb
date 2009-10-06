@@ -1,9 +1,8 @@
 <% for item in @cars %>
   <div id="carro_listado_<%= item.id%>" class="veiculo_listado">
     <span id="carro_foto">
-      <img src="uploads/pictures/<%= item.id%>/picture1_thumbnail.jpg" class="veiculo_foto"/>
+      <img src="../uploads/pictures/<%= item.id%>/picture_<%= item.picture[0].id%>_thumbnail.jpg" class="veiculo_foto"/>
     </span>
-  
     <span id="carro_descricao" class="carro_descricao">
       <label><%= item.car.brand.name%> <%= item.car.name%> <%= item.doors%>P <%= item.gear.name%> <%= item.year.description%>-<%= item.model.description%> </label><br>
       <label class="carro_preco">R$ <%= item.amount%></label>
@@ -11,3 +10,4 @@
     </span>
   </div>
 <% end %>
+

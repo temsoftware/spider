@@ -10,3 +10,4 @@ class TypeVehiclesController < ApplicationController
     item.actions.exclude :show
   end
 end
+

@@ -10,3 +10,4 @@ class Picture < ActiveRecord::Base
   end
 
 end
+
