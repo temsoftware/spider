@@ -1,0 +1,104 @@
+    <%content_for :class_banner_name do%>
+            banner_site_vehicle_list
+    <%end%>
+
+  <div id="vehicles_list">
+
+     <span id="label_detalhe_veiculo" class="label_detalhe_veiculo">
+        <label>Detalhes do Veículo</label>
+     </span>
+
+      <div id="veiculo_fotos_dados">
+          <div id="veiculo_titulo_preco">
+              <label class="veiculo_detalhe_titulo"><%= @vehicle.car.brand.name%> <%= @vehicle.car.name%></label>
+              <label class="veiculo_detalhe_preco"><%= Dinheiro.new(@vehicle.amount).real_formatado %></label>
+           </div>
+
+          <div id="veiculos_fotos" class="veiculos_fotos">
+            <ul>
+              <% for picture in @vehicle.picture %>
+                <!--<li><%= lightbox_image_tag "../uploads/pictures/#{picture.id}/picture_#{picture.id}_thumbnail.jpg", "../uploads/pictures/#{picture.id}/picture_#{picture.id}_original.jpg", {:class=>"images"}, :title => "#{@vehicle.car.brand.name} #{@vehicle.car.name}" %>-->
+                <!--<li><img src="../uploads/pictures/<%= picture.id%>/picture_<%= picture.id%>_thumbnail.jpg"/>-->
+                <li><%= lightbox_image_tag picture.data.url(:thumbnail), picture.data.url(:original) , {:class=>"images"}, :title => "#{@vehicle.car.brand.name} #{@vehicle.car.name}" %>
+              <% end %>
+            </ul>
+          </div>
+
+          <div id="veiculo_short_description">
+            <span class="text_short_description">
+              <ul>
+                <li><%=@vehicle.color.name%>
+                <li>|
+                <li>Final da Placa: <%=@vehicle.finale%>
+                <li>|
+                <li><%=@vehicle.fuel.name%>
+                <li>|
+                <li><%=@vehicle.doors%> Portas
+                <li>|
+                <li><%=@vehicle.km%> Km
+                <li>|
+                <li>Câmbio: <%=@vehicle.gear.name%>
+              </ul>
+            </span>
+          </div>
+      </div>
+
+      <div id="veiculo_outras_informacoes">
+          <div id="veiculo_detalhado_info_esquerda" class="veiculo_detalhado_info_esquerda">
+
+            <span id="veiculo_detalhe_opcionais" class="veiculo_detalhe_opcionais_titulo">
+              <label class="opcionais_titulo">Equipamentos Opcionais</label><br>
+            </span>
+
+            <span id="veiculo_detalhe_opcionais_conteudo" class="veiculo_detalhe_opcionais_conteudo">
+              <% for option in @vehicle.options_vehicle %>
+                <label class="opcionais_conteudo"><%= option.option.description %>, </label>
+              <% end %>
+            </span>
+
+            <span id="veiculo_observacoes" class="veiculo_detalhe_observacoes_titulo">
+              <label class="opcionais_titulo">Observações</label><br>
+            </span>
+
+            <span id="veiculo_observacoes_conteudo" class="veiculo_detalhe_observacoes_conteudo">
+              <label class="opcionais_conteudo">Garantia do Veículo, Financiamento Total</label>
+            </span>
+
+            <span id="veiculo_detalhe_botoes">
+              <ul>
+                <li><img src="../images/botao_seguro.jpg">
+                <li><img src="../images/botao_financiamento.jpg">
+                <li><img src="../images/botao_endereco.jpg">
+              </ul>
+            </span>
+
+            <span id="veiculo_detalhe_loja_telefone">
+              <img src="../images/telefone.jpg">
+            </span>
+
+          </div>
+
+          <div id="veiculo_detalhado_info_direita"  class="veiculo_detalhado_info_direita">
+
+            <span id="veiculo_detalhado_contatos">
+              <label class="opcionais_titulo">Contatos</label><br>
+            </span>
+
+            <span id="veiculo_detalhado_contatos_obs">
+              <label class="opcionais_conteudo">Preencha o formulário abaixo para dúvidas, propostas ou sugestões</label>
+            </span>
+
+            <span id="veiculo_detalhado_form">
+              <% form_tag({:controller=>"contacts", :action=>"send_email"}, :method => "post") do %>
+                <%= label_tag(:nome,     "Nome:"    ,:class => "form_label_nome") %>  <%= text_field_tag(:nome_txt    , nil ,:class => "form_txt_nome"  ,:size => 30) %><br><br>
+                <%= label_tag(:email,    "E-Mail:"  ,:class => "form_label_email") %>  <%= text_field_tag(:email_txt   , nil,:class => "form_txt_email" ,:size => 30) %><br><br>
+                <%= label_tag(:telefone, "Telefone:",:class => "form_label_tel") %>  <%= text_field_tag(:telefone_txt, nil,:class => "form_txt_tel"     ,:size => 30) %><br><br>
+                <%= label_tag(:msg,      "Mensagem:",:class => "form_label_msg") %>  <%= text_area_tag (:msg_tx , nil, :rows => 8 , :cols => 35,:class => "form_txt_msg"  ) %><br><br>
+                <%= check_box_tag 'news', '1', false, :class => "form_check_news"%>  <%= label_tag(:news,     "Desejo receber promoções e oportunidades exclusivas da Ricar Automóveis e de seus parceiros",:class => "form_label_news") %> <br><br>
+                <%= submit_tag("Enviar",:class=> "form_botao") %><br>
+              <% end %>
+            </span>
+          </div>
+      </div>
+  </div>
+

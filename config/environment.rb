@@ -7,6 +7,8 @@ RAILS_GEM_VERSION = '2.3.2' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 #require 'brazilian-rails'
 
+require 'smtp_tls'
+
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
@@ -37,7 +39,22 @@ Rails::Initializer.run do |config|
   config.time_zone = 'Brasilia'
   config.active_record.timestamped_migrations = false
   config.gem 'brI18n'
+
+  require 'brdinheiro'
+
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :br
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :authentication => :plain,
+    :user_name => "eduzera@gmail.com",
+    :password => "exaltasamba2007"
+  }
+
 end
+

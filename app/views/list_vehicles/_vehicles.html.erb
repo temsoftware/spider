@@ -1,14 +1,33 @@
 <% for item in @vehicles %>
-  <div id="carro_listado_<%= item.id%>" class="veiculo_listado">
-    <span id="carro_foto">
-      <img src="../uploads/pictures/<%= item.id%>/picture_<%= item.picture[0].id%>_thumbnail.jpg" class="veiculo_foto"/>
+  <div id="carro_paginate" class="vehicles_paginate">
+    <%= will_paginate @vehicles %>
+  </div>
+
+  <div id="carro_listado_<%= item.id%>" class="veiculo_listado_pag_list">
+
+    <span id="carro_descricao_<%= item.id%>" class="carro_descricao_pag_list">
+      <label><%= item.car.brand.name%> <%= item.car.name%> <%= item.doors%>P <%= item.gear.name%></label>
     </span>
 
-    <span id="carro_descricao" class="carro_descricao">
-      <label><%= item.car.brand.name%> <%= item.car.name%> <%= item.doors%>P <%= item.gear.name%> <%= item.year.description%>-<%= item.model.description%> </label><br>
-      <label class="carro_preco">R$ <%= item.amount%></label>
-      <label class="veiculo_saiba_mais">Saiba Mais</label>
+    <span id="carro_foto_<%= item.id%>">
+      <img src="../uploads/pictures/<%= item.picture[0].id%>/picture_<%= item.picture[0].id%>_thumbnail.jpg" class="veiculo_foto_pag_list"/>
     </span>
+
+    <span id="carro_sub_descricao_<%= item.id%>" class="carro_sub_descricao_pag_list">
+      <label><%= item.doors %> Portas - <%= item.color.name %> - <%= item.year.description %>/<%= item.model.description %> - <%= item.gear.name %> - <%= item.km %> Km</label>
+    </span>
+
+    <span id="carro_preco_<%= item.id%>" class="carro_preco_pag_list">
+      <br>
+      <label><%= Dinheiro.new(item.amount).real_formatado %></label>
+    </span>
+
+    <span id="carro_links_pag_list_<%= item.id%>" class="carro_links_pag_list">
+      <label>Ficha de Financiamento</label><br>
+      <label>Seguro</label><br>
+      <label>Fale Conosco</label><br>
+    </span>
+    <label class="veiculo_saiba_mais_pag_list"><%= link_to "Saiba Mais", :controller => "vehicle_details", :action => "show", :id => item %></label>
   </div>
 <% end %>
 

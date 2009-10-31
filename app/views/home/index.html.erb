@@ -1,8 +1,21 @@
 
+        <%content_for :class_banner_name do%>
+            banner_site_home
+        <%end%>
+
+
       <div id="vehicles">
         <%= render :partial => "vehicles"%>
       </div>
       <div id="moto">
         <%= render :partial => "bikes"%>
+      </div>
+
+      <div id="menu_direita">
+
+        <%= render :partial => "partners" %>
+
+        <%= render :partial => "stores" %>
+
       </div>
 

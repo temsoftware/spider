@@ -1,13 +1,13 @@
 <% for item in @cars %>
   <div id="carro_listado_<%= item.id%>" class="veiculo_listado">
     <span id="carro_foto">
-      <img src="../uploads/pictures/<%= item.id%>/picture_<%= item.picture[0].id%>_thumbnail.jpg" class="veiculo_foto"/>
+      <img src="../uploads/pictures/<%= item.picture[0].id%>/picture_<%= item.picture[0].id%>_thumbnail.jpg" class="veiculo_foto"/>
     </span>
     <span id="carro_descricao" class="carro_descricao">
       <label><%= item.car.brand.name%> <%= item.car.name%> <%= item.doors%>P <%= item.gear.name%> <%= item.year.description%>-<%= item.model.description%> </label><br>
-      <label class="carro_preco">R$ <%= item.amount%></label>
-      <label class="veiculo_saiba_mais">Saiba Mais</label>
+      <label class="carro_preco"><%= Dinheiro.new(item.amount).real_formatado %></label>
     </span>
+    <label class="veiculo_saiba_mais"><%= link_to "Saiba Mais", :controller => "vehicle_details", :action => "show", :id => item %></label>
   </div>
 <% end %>
 

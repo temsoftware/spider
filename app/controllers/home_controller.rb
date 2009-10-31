@@ -4,8 +4,10 @@ class HomeController < ApplicationController
   layout "ricar"
 
   def index
-    @cars       = Vehicle.carros
-    @bikes      = Vehicle.motos
+    @cars     = Vehicle.lista 1
+    @bikes    = Vehicle.lista 3
+    @stores   = Store.all
+    @partners = Partner.parceiros
   end
 end
 

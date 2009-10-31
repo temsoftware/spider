@@ -3,7 +3,7 @@ class VehiclesController < ApplicationController
 
   active_scaffold :vehicle do |item|
     item.label = "Carros Anunciados"
-    item.columns =  [:car, :type_vehicle, :year, :model, :amount, :km, :doors, :color, :fuel, :gear]
+    item.columns =  [:car, :type_vehicle, :year, :model, :amount, :km, :doors, :color, :fuel, :gear, :finale]
     item.columns[:type_vehicle].label = "Tipo"
     item.columns[:type_vehicle].form_ui = :select
     item.columns[:car].label = "Marca / Modelo"
@@ -33,12 +33,16 @@ class VehiclesController < ApplicationController
     # item.columns[:car].search_sql = 'brands.name'
     # item.search.columns = [:car]#, :brand]
 
-    item.create.columns.exclude :options_vehicle
+    #item.create.columns.exclude :options_vehicle
+    #item.update.columns.exclude :options_vehicle
+
     item.actions.exclude :nested
     item.create.multipart = true
-    item.create.columns = [:type_vehicle, :car, :year, :model, :amount, :km, :doors, :finale, :note, :color,
-                     :fuel, :gear, :option, :picture]
-    item.show.columns = [:car, :model, :year, :color, :fuel, :gear, :picture]
+    item.create.columns = [:type_vehicle, :car, :year, :model, :amount, :km, :doors, :finale, :note, :color,:fuel, :gear, :option, :picture]
+    item.show.columns   = [:car, :model, :year, :color, :fuel, :gear, :options_vehicle, :picture]
+
+    item.update.multipart = true
+    item.update.columns = [:car, :type_vehicle, :year, :model, :amount, :km, :doors, :color, :fuel, :gear, :finale,:option,:picture]
   end
 end
 

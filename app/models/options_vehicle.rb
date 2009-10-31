@@ -4,4 +4,9 @@ class OptionsVehicle < ActiveRecord::Base
 
   belongs_to :vehicle
   belongs_to :option
+
+  def to_label
+    "#{option.description}"
+  end
 end
+
