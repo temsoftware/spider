@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 17) do
+ActiveRecord::Schema.define(:version => 21) do
 
   create_table "brands", :force => true do |t|
     t.string   "name"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(:version => 17) do
 
   create_table "colors", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "costumers", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "tel"
+    t.integer  "news"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -96,8 +105,13 @@ ActiveRecord::Schema.define(:version => 17) do
     t.integer  "cep"
     t.string   "city"
     t.string   "state"
+    t.string   "telephone"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "data_file_name"
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.datetime "data_updated_at"
   end
 
   create_table "type_vehicles", :force => true do |t|
