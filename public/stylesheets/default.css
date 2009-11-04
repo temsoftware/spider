@@ -10,9 +10,11 @@ body{
 {
 	background-image:url(../images/bg_footer.gif);
 	background-repeat:no-repeat;
-	height:60px;
+	height:100px;
 	clear:both;
 	width:1000px;
+	position:relative;
+	left:49px;
 }
 #fundo_pag{
   background-image:url(../images/bg_pag.gif);
@@ -32,7 +34,7 @@ body{
 	border-top-width: 0px;
 	border-right-width: 0px;
 	border-left-width: 0px;
-	border-bottom-color:red;
+	border-bottom-color:#9e0404;
 	border-style: solid;
 	font-weight:bold;
 	_top:180px;
@@ -40,7 +42,7 @@ body{
 
 #menu_top ul{
 	list-style-type: none;
-	padding-left:30px;
+	padding-left:20px;
 	padding-top:5px;
 
 }
@@ -51,8 +53,51 @@ body{
 	color:#FFF;
 	font-family:Verdana, Geneva, sans-serif;
 }
-#banner_site{
+
+#menu_top a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#menu_top a:visited{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#menu_top a:hover {
+    background:#9e0404 none repeat scroll 0 0;
+    border-color:#9e0404;
+    border-style:solid;
+    border-top:10px solid #9e0404;
+    border-bottom:5px solid #9e0404;
+    border-right-width: 0px;
+	border-left-width: 0px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#menu_top a:active {
+    background:#9e0404 none repeat scroll 0 0;
+    border-color:#9e0404;
+    border-style:solid;
+    border-top:10px solid #9e0404;
+    border-bottom:5px solid #9e0404;
+    border-right-width: 0px;
+	border-left-width: 0px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.banner_site_home{
 	background-image:url(../images/banner_site.jpg);
+	background-repeat:no-repeat;
+	height:237px;
+	left:120px;
+	position:relative;
+	top:33px;
+	width:800px;
+}
+.banner_site_vehicle_list{
+	background-image:url(../images/banner_site_2.jpg);
 	background-repeat:no-repeat;
 	height:237px;
 	left:120px;
@@ -77,7 +122,7 @@ body{
     left:120px;
     position:relative;
     top:5px;
-    width:680px;
+    width:798px;
 }
 #moto{
     float:left;
@@ -137,9 +182,17 @@ body{
     color:#b9240e;
     float:right;
     font-size:10px;
-    position:relative;
     right:7px;
-    top:18px;
+    top:90px;
+    position:absolute;
+    font-family:Verdana,Geneva,sans-serif;
+    font-weight:bold;
+}
+.veiculo_saiba_mais a{
+    color:#b9240e;
+}
+.veiculo_saiba_mais a:hover{
+    color:#b9240e;
 }
 .menu_direita_top{
     background-attachment:scroll;
@@ -179,6 +232,406 @@ body{
     font-family:Verdana,Geneva,sans-serif;
     font-size:11px;
 }
+/*Pagina lista de Vehicles INICIO*/
+.veiculo_foto_pag_list{
+    float:left;
+    left:30px;
+    top:60px;
+    position:absolute;
+}
+.veiculo_listado_pag_list{
+    background-color:#D0D0D0;
+    height:311px;
+    width:189px;
+    float:left;
+    margin-left:5px;
+    position:relative;
+    margin-top:20px;
+}
+.carro_descricao_pag_list{
+    float:right;
+    font-family:Verdana,Geneva,sans-serif;
+    text-align: center;
+    font-size:13px;
+    font-weight:bold;
+    position:relative;
+    top:7px;
+    width:190px;
+}
+.carro_preco_pag_list{
+    float:right;
+    font-family:Verdana,Geneva,sans-serif;
+    text-align: center;
+    font-weight:bold;
+    color:#b9240e;
+    font-size:16px;
+    position:absolute;
+    top:175px;
+    width:100%;
+
+}
+.veiculo_saiba_mais_pag_list{
+    color:#b9240e;
+    float:right;
+    font-size:10px;
+    right:7px;
+    top:285px;
+    position:absolute;
+    font-family:Verdana,Geneva,sans-serif;
+    font-weight:bold;
+}
+.veiculo_saiba_mais_pag_list a{
+    color:#b9240e;
+}
+.veiculo_saiba_mais_pag_list a:hover{
+    color:#b9240e;
+}
+.carro_sub_descricao_pag_list{
+    float:right;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:10px;
+    position:absolute;
+    text-align:center;
+    top:160px;
+    width:100%;
+}
+.carro_links_pag_list{
+    float:right;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:10px;
+    padding-left:15px;
+    position:absolute;
+    text-align:left;
+    text-decoration:underline;
+    top:230px;
+    width:100%;
+}
+
+.vehicles_paginate{
+    float:right;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:12px;
+    padding-left:15px;
+    position:absolute;
+    text-align:left;
+    text-decoration:underline;
+    top:0;
+    width:100%;
+}
+.vehicles_paginate a{
+
+}
+.vehicles_paginate a:hover{
+    color: #9e0404;
+}
+/*Pagina lista de Vehicles FIM*/
+
+/*Pagina Contatos */
+#contato_form{
+    background:#D1CFD0 none repeat scroll 0 0;
+    height:313px;
+    position:relative;
+    width:430px;
+    float:left;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:10px;
+}
+#contato_lojas_info{
+    background:#D1CFD0 none repeat scroll 0 0;
+    height:313px;
+    position:relative;
+    width:350px;
+    float:right;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:10px;
+}
+#contato_info_form{
+    position:absolute;
+    top:30px;
+    left:5px;
+}
+.contato_info_label{
+    position:relative;
+    top:10px;
+    left:15px;
+    font-style:italic;
+    font-size:10px;
+}
+.form_info_txt_nome, .form_info_txt_tel, .form_info_txt_email, .form_info_txt_msg{
+    position:absolute;
+    left:70px;
+}
+.form_info_label_nome, .form_info_label_tel, .form_info_label_email, .form_info_label_msg{
+    position:absolute;
+    text-align:right;
+    width:60px;
+}
+.form_info_label_news{
+    position:absolute;
+    width:380px;
+    left:20px;
+    top:230px;
+}
+.form_info_check_news{
+    position:absolute;
+    top:230px;
+    left:0px;
+}
+.form_info_botao {
+    background-color:#752D2E;
+    color:#FFFFFF;
+    font-family:Arial,Helvetica,sans-serif;
+    font-weight:bold;
+    left:175px;
+    position:absolute;
+    top:250px;
+	}
+.label_end_tel{
+    font-family:Arial,Helvetica,sans-serif;
+    font-weight:bold;
+    font-size:15px;
+    text-decoration:underline;
+    position:relative;
+    top:10px;
+    left:20px;
+}
+.contato_lojas{
+    position:relative;
+    top:20px;
+    left:20px;
+}
+.contato_loja_titulo{
+    font-family:Arial,Helvetica,sans-serif;
+    font-weight:bold;
+    font-size:12px;
+}
+.contatos_loja_end{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+}
+.contatos_loja_tel_label{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+    font-weight:bold;
+}
+/*Pagina Conatos FIM*/
+
+/*Pagina Veiculo Detakhado*/
+.label_detalhe_veiculo{
+    color:#9E0404;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:15px;
+    font-weight:bold;
+    position:relative;
+    text-align:center;
+}
+#veiculo_fotos_dados{
+    background:#D1CFD0 none repeat scroll 0 0;
+    height:184px;
+    margin-top:5px;
+    width:798px;
+}
+#veiculo_short_description{
+    background:#FFFFFF url(../images/short_description.gif) no-repeat scroll center top;
+    height:33px;
+    left:65px;
+    position:absolute;
+    top:160px;
+    width:684px;
+}
+.text_short_description{
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:10px;
+    font-weight:bold;
+    left:13px;
+    position:absolute;
+    top:7px;
+}
+.text_short_description ul{
+	list-style-type: none;
+}
+.text_short_description ul li{
+	float: left;
+	padding-right:20px;
+	padding-top:2px;
+}
+.veiculos_fotos{
+    height:500px;
+    left:10px;
+    position:absolute;
+    top:65px;
+    width:798px;
+}
+.veiculos_fotos ul{
+    list-style-type: none;
+}
+.veiculos_fotos ul li{
+    float:left;
+    padding-right:5px;
+}
+.veiculo_detalhe_titulo{
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    left:13px;
+    position:absolute;
+    margin-top:10px;
+}
+.veiculo_detalhe_preco{
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    left:640px;
+    margin-top:10px;
+    position:absolute;
+    color:#9E0404;
+}
+.veiculo_detalhado_info_esquerda{
+    float:left;
+    height:338px;
+    position:relative;
+    top:5px;
+    width:375px;
+}
+.veiculo_detalhado_info_direita{
+    float:left;
+    height:358px;
+    position:relative;
+    top:5px;
+    width:423px;
+}
+.veiculo_detalhe_opcionais_titulo{
+    left:0;
+    position:absolute;
+    top:10px;
+}
+.veiculo_detalhe_opcionais_conteudo{
+    left:0;
+    position:absolute;
+    top:35px;
+}
+.opcionais_titulo{
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:14px;
+    font-weight:bold;
+}
+.opcionais_conteudo{
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:10px;
+}
+
+.veiculo_detalhe_observacoes_titulo{
+    left:0;
+    position:absolute;
+    top:60px;
+}
+
+.veiculo_detalhe_observacoes_conteudo{
+    left:0;
+    position:absolute;
+    top:80px;
+}
+#veiculo_detalhe_botoes{
+    position:absolute;
+    top:110px;
+}
+#veiculo_detalhe_botoes ul{
+    list-style-type: none;
+}
+#veiculo_detalhe_botoes ul li{
+    float:left;
+    padding-right:1px;
+}
+#veiculo_detalhe_loja_telefone{
+    position:absolute;
+    top:145px;
+}
+#veiculo_detalhado_contatos{
+    position:absolute;
+    top:10px;
+    left:5px;
+}
+#veiculo_detalhado_contatos_obs{
+    position:absolute;
+    top:30px;
+    left:5px;
+}
+#veiculo_detalhado_form{
+    position:absolute;
+    top:60px;
+    left:5px;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:10px;
+}
+.form_txt_nome, .form_txt_tel, .form_txt_email, .form_txt_msg{
+    position:absolute;
+    left:70px;
+}
+.form_label_nome, .form_label_tel, .form_label_email, .form_label_msg{
+    position:absolute;
+    text-align:right;
+    width:60px;
+}
+.form_label_news{
+    position:absolute;
+    width:380px;
+    left:20px;
+    top:230px;
+}
+.form_check_news{
+    position:absolute;
+    top:230px;
+    left:0px;
+}
+.form_botao {
+    background-color:#752D2E;
+    color:#FFFFFF;
+    font-family:Arial,Helvetica,sans-serif;
+    font-weight:bold;
+    left:175px;
+    position:absolute;
+    top:260px;
+	}
+/*Pagina Veiculo Detalhado FIM*/
+
+/*Pagina Endereços*/
+
+#endereco_esquerda{
+    background:#D1CFD0 none repeat scroll 0 0;
+    height:317px;
+    position:relative;
+    width:333px;
+    float:left;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:10px;
+}
+
+#endereco_direita{
+    background:#D1CFD0 none repeat scroll 0 0;
+    border:6px solid #606060;
+    float:right;
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:10px;
+    position:relative;
+    width:425px;
+}
+
+#endereco_esquerda a{
+
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:10px;
+    color:#191919;
+}
+
+#endereco_esquerda a:hover{
+    /*background:#606060 none repeat scroll 0 0;*/
+    font-family:Verdana,Geneva,sans-serif;
+    font-size:10px;
+    color:#9E0404;
+    text-decoration:none;
+
+}
+/*Pagina Endereços FIM*/
 
 /*MAH*/
 
@@ -244,7 +697,8 @@ blockquote{
 #wrap{
     color:#404040;
     width:760px;
-    margin:10px auto;
+    /*margin:10px auto;*/
+    margin-left:135px;
     padding:0;
 }
 

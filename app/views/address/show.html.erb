@@ -1,0 +1,33 @@
+    <%content_for :class_banner_name do%>
+            banner_site_vehicle_list
+    <%end%>
+
+    <div id="vehicles_list">
+
+      <span id="label_endereco_titulo" class="label_detalhe_veiculo">
+        <label>Endereços</label>
+      </span>
+
+      <div id="endereco_esquerda">
+
+        <% for store in @stores %>
+
+          <% link_to ({:controller=> 'address' , :action=> 'show', :id => store}) do%>
+            <span id="contato_lojas_<%= store.id %>" class="contato_lojas">
+              <!--<%= link_to store.name , {:controller=> 'address' , :action=> 'show', :id => store} , :id => store.id , :class=> "contato_loja_titulo" %><br> -->
+              <label class="contato_loja_titulo"><%= store.name %></label><br>
+              <label class="contatos_loja_end"><%= store.street%>, <%= store.number%> - <%= store.neighborhood%> - <%= store.city%> - <%= store.state %> </label><br>
+              <label class="contatos_loja_tel_label">Tel: </label><label class="contatos_loja_end""><%= store.telephone %></label><br><br>
+            </span>
+          <% end %>
+
+        <% end %>
+
+      </div>
+
+      <div id="endereco_direita">
+        <%= lightbox_image_tag @selected_store.data.url(:original), @selected_store.data.url(:original) , {:class=>"images"}, :title => "#{@selected_store.street}, #{@selected_store.number} - #{@selected_store.neighborhood} - #{@selected_store.city} - #{@selected_store.state}" %>
+      </div>
+
+    </div>
+

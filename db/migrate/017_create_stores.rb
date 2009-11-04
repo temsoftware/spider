@@ -8,6 +8,7 @@ class CreateStores < ActiveRecord::Migration
       t.integer     :cep
       t.string      :city
       t.string      :state
+      t.string      :telephone
       t.timestamps
     end
   end

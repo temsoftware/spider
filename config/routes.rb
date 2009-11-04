@@ -16,8 +16,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :vehicles,      :active_scaffold => true
   map.resources :partners,      :active_scaffold => true
   map.resources :stores,        :active_scaffold => true
+  map.resources :costumers,     :active_scaffold => true
   map.resources :home
   map.resources :list_vehicles
+  map.resources :vehicle_details
+  map.resources :contacts
+  map.resources :address
 
 
   map.connect ':controller/:action/:id'
